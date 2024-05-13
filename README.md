@@ -1,26 +1,26 @@
-# [Start Bootstrap - The Big Picture](https://startbootstrap.com/template/the-big-picture/)
+# [Start Bootstrap - Full Width Pics](https://startbootstrap.com/template/full-width-pics/)
 
-[The Big Picture](https://startbootstrap.com/template/the-big-picture/) is a responsive HTML template for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). The template features a full page background image and a fixed bottom navigation bar.
+[Full Width Pics](https://startbootstrap.com/template/full-width-pics/) is an HTML starter template for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/). This template features numerous full width background image content sections.
 
 ## Preview
 
-[![The Big Picture Preview](https://assets.startbootstrap.com/img/screenshots/templates/the-big-picture.png)](https://startbootstrap.github.io/startbootstrap-the-big-picture/)
+[![Full Width Pics Preview](https://assets.startbootstrap.com/img/screenshots/templates/full-width-pics.png)](https://startbootstrap.github.io/startbootstrap-full-width-pics/)
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-the-big-picture/)**
+**[View Live Preview](https://startbootstrap.github.io/startbootstrap-full-width-pics/)**
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-the-big-picture/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-the-big-picture.svg)](https://www.npmjs.com/package/startbootstrap-the-big-picture)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-full-width-pics/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-full-width-pics.svg)](https://www.npmjs.com/package/startbootstrap-full-width-pics)
 
 ## Download and Installation
 
 To begin using this template, choose one of the following options to get started:
 
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template/the-big-picture/)
-* Install via npm: `npm i startbootstrap-the-big-picture`
-* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-the-big-picture.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-the-big-picture)
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template/full-width-pics/)
+* Install via npm: `npm i startbootstrap-full-width-pics`
+* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-full-width-pics.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-full-width-pics)
 
 ## Usage
 
@@ -34,7 +34,7 @@ Clone the source files of the theme and navigate into the theme's root directory
 
 #### npm Scripts
 
-* `npm run build` builds the project - this builds assets, HTML, JS, and CSS into `dist`
+* `npm run build` builds the project * this builds assets, HTML, JS, and CSS into `dist`
 * `npm run build:assets` copies the files in the `src/assets/` directory into `dist`
 * `npm run build:pug` compiles the Pug located in the `src/pug/` directory into `dist`
 * `npm run build:scripts` brings the `src/js/scripts.js` file into `dist`
@@ -44,10 +44,6 @@ Clone the source files of the theme and navigate into the theme's root directory
 * `npm start` or `npm run start` runs the project, launches a live preview in your default browser, and watches for changes made to files in `src`
 
 You must have npm installed in order to use this build environment.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-the-big-picture/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/template/the-big-picture/).
 
 ## About
 
@@ -66,4 +62,4 @@ Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework
 
 ## Copyright and License
 
-Copyright 2013-2023 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-the-big-picture/blob/master/LICENSE) license.
+Copyright 2013-2023 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-full-width-pics/blob/master/LICENSE) license.
