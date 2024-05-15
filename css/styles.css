@@ -139,11 +139,16 @@ body {
         padding: 20px;
     }
     .section {
-        margin-bottom: 40px;
-        padding: 20px;
-        background-color: #ffffff;
-        border-radius: 8px; /* Optional: Rounded corners */
+        opacity: 1;
+        transition: opacity 0.5s ease-out; /* Smooth transition for fading */
     }
+    .hidden {
+        opacity: 0; /* Hide the section */
+        visibility: hidden; /* Remove from the layout */
+        position: absolute;
+        width: 100%;
+    }
+
     .background, .education, .skills, .experiences, .achievements {
         color: #333; /* Text color for readability */
     }
