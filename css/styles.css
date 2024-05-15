@@ -97,9 +97,9 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: #fff5e6; /* Light yellow background for the whole page */
+  color: #333; /* Dark grey text for better readability */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding-top: 40px; /* Add space for the fixed navbar */
@@ -111,7 +111,8 @@ body {
         left: 0;
         width: 200px;
         height: 100%;
-        background-color: #343a40; /* Dark grey to match the navbar */
+        background-color:  #ff8c00 /* Dark grey to match the navbar */
+        color: #ffffff;
         padding-top: 10px;
         z-index: 1000;
     }
@@ -128,7 +129,7 @@ body {
         transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
     }
     #sidebar ul li a:hover {
-        background-color: #007bff; /* Bootstrap primary color for hover effects */
+        background-color: #ffd700; /* Bootstrap primary color for hover effects */
         color: #ffffff; /* White text on hover */
     }
     .content {
@@ -152,10 +153,13 @@ body {
     }
 
     .background, .education, .skills, .experiences, .achievements {
-        color: #333;
+        color: #ffefd5;;
     }
     .education, .experiences, .achievements {
         background-color: #eeeeee; /* Slightly different to add contrast between sections */
+    }
+  footer {
+        background-color: #ff8c00; /* Matching orange footer */
     }
 </style>
 
