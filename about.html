@@ -10,47 +10,40 @@
     <link href="css/styles.css" rel="stylesheet" />
     <style>
         body {
-            position: relative;
-            padding-top: 40px;
+            padding-top: 40px; /* Add space for the fixed navbar */
         }
         #sidebar {
             position: fixed;
-            top: 0;
-            left: -250px; /* Start off-screen */
-            width: 200px;
+            top: 50px; /* Adjusted to be below the navbar */
+            left: 0;
+            width: 160px; /* Narrow width */
             height: 100%;
             background: #f8f9fa;
-            transition: left 0.3s; /* Smooth transition for moving in and out */
-            padding-top: 60px;
-            z-index: 1000;
-        }
-        #sidebar:hover {
-            left: 0; /* Move sidebar to show it when hovered */
+            padding-top: 20px;
+            z-index: 1000; /* Ensures sidebar is above other content */
         }
         .content {
-            transition: margin-left .5s;
+            margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
             padding: 20px;
-            margin-left: 20px;
         }
         .section {
-            margin-bottom: 40px; /* Spacing between sections */
+            margin-bottom: 40px; /* Additional spacing between sections */
+        }
+        .background, .education, .skills, .experiences {
             padding: 20px;
         }
         .background {
-            background-color: #ffffff; /* White background */
-            color: #333; /* Dark text for light background */
+            background-color: #ffffff;
+            color: #333;
         }
         .education {
-            background-color: #333; /* Dark background */
-            color: #ffffff; /* White text for dark background */
+            background-color: #eeeeee; /* Slightly different to add contrast */
         }
         .skills {
-            background-color: #ffffff; /* White background */
-            color: #333; /* Dark text for light background */
+            background-color: #ffffff;
         }
         .experiences {
-            background-color: #333; /* Dark background */
-            color: #ffffff; /* White text for dark background */
+            background-color: #eeeeee;
         }
     </style>
 </head>
