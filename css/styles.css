@@ -120,12 +120,16 @@ body {
         padding: 20px;
     }
     .section {
-        margin-bottom: 60px; /* Increased bottom margin for more space between sections */
-        padding: 40px; /* Optional: Increase padding for more internal spacing */
-        background-color: #ffffff; /* Adding a background color for contrast, adjust as needed */
-        border-radius: 8px; /* Optional: Rounded corners for aesthetic */
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adding a subtle shadow for depth */
+        opacity: 1;
+        transition: opacity 0.5s ease-out; /* Smooth transition for fading */
     }
+    .hidden {
+        opacity: 0; /* Hide the section */
+        visibility: hidden; /* Remove from the layout */
+        position: absolute;
+        width: 100%;
+    }
+
     .background, .education, .skills, .experiences, .achievements {
         color: #333;
     }
