@@ -41,69 +41,13 @@
             background-color: #eeeeee; /* Slightly different to add contrast between sections */
         }
     </style>
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Maddison Ma</a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div id="sidebar">
-        <ul>
-            <li><a href="#background">Background</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experiences">Experiences</a></li>
-            <li><a href="#interests">Interests</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-        </ul>
-    </div>
-    <div class="content">
-        <section id="background" class="section background">
-            <h2>Background</h2>
-            <p>As a high school student at the Kang Chiao International High School, I am driven by a steadfast ambition to become a doctor. With a solid foundation in medical sciences and a passion for making a difference, I am poised to embark on a career devoted to improving the health and well-being of others.</p>
-        </section>
-        <section id="education" class="section education">
-            <h2>Education</h2>
-             <h3 class="subtitle">Kang Chiao International School</h3>
-            <p>Taipei Campus, Taiwan | 2021 - 2024</p>
-            </p>SAT: 1490 | GPA: 4.3 | TOEFL: 105 | UCAT: 2720</p>
-            <h3 class="subtitle">Brunel University London</h3>
-            </p>2024 - 2029 | Doctor of Medicine</p>
-        </section>
-        <div class="skills-section">
-    <div class="skill-circle" id="language">
-        <span>Language</span>
-    </div>
-    <div class="skill-circle" id="computer">
-        <span>Computer</span>
-    </div>
-    <div class="skill-circle" id="soft-skills">
-        <span>Soft Skills</span>
-    </div>
-</div>
-<div id="skill-details">
-    <!-- Details will be inserted here based on hover -->
-</div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>About Maddison Ma</title>
     <style>
         .skills-container {
             display: flex;
-            justify-content: center;
-            gap: 30px; /* Spacing between circles */
+            justify-content: space-around;
             margin-top: 20px;
         }
+
         .skill-circle {
             width: 150px;
             height: 150px;
@@ -111,21 +55,44 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            font-size: 16px;
             color: #fff;
-            font-size: 16px;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+            overflow: hidden;
         }
-        #language { background-color: #4CAF50; } /* Green circle */
-        #computer { background-color: #2196F3; } /* Blue circle */
-        #soft-skills { background-color: #FFC107; } /* Amber circle */
-        .skill-circle:hover {
-            transform: scale(1.1); /* Enlarge on hover */
+
+        #language-circle { background-color: #4CAF50; } /* Green circle */
+        #computer-circle { background-color: #2196F3; } /* Blue circle */
+        #soft-skills-circle { background-color: #FFC107; } /* Amber circle */
+
+        .skill-circle .label {
+            z-index: 2;
+            transition: opacity 0.3s ease;
         }
-        #skill-details {
+
+        .skill-circle .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
-            margin-top: 20px;
-            font-size: 16px;
+            width: 90%;
+            height: 90%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: none;
+        }
+
+        .skill-circle:hover .label {
+            opacity: 0;
+        }
+
+        .skill-circle:hover .content {
+            opacity: 1;
+            display: block;
         }
     </style>
 </head>
@@ -133,41 +100,44 @@
     <section id="skills" class="section skills">
         <h2>Skills</h2>
         <div class="skills-container">
-            <div class="skill-circle" id="language">
-                <span>Language</span>
+            <div class="skill-circle" id="language-circle">
+                <span class="label">Language</span>
+                <div class="content hidden">
+                    Mandarin - 18 years<br>
+                    English - 12 years<br>
+                    Japanese - 2 years
+                </div>
             </div>
-            <div class="skill-circle" id="computer">
-                <span>Computer</span>
+            <div class="skill-circle" id="computer-circle">
+                <span class="label">Computer</span>
+                <div class="content hidden">
+                    Java - 1 year
+                </div>
             </div>
-            <div class="skill-circle" id="soft-skills">
-                <span>Soft Skills</span>
+            <div class="skill-circle" id="soft-skills-circle">
+                <span class="label">Soft Skills</span>
+                <div class="content hidden">
+                    Leadership<br>
+                    Communication
+                </div>
             </div>
         </div>
-        <div id="skill-details"></div>
     </section>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const skills = {
-            'language': 'Language<br>Mandarin - 18 years<br>English - 12 years<br>Japanese - 2 years',
-            'computer': 'Computer<br>Java - 1 year',
-            'soft-skills': 'Soft Skills<br>Leadership<br>Communication'
-        };
-
-        const skillCircles = document.querySelectorAll('.skill-circle');
-        const skillDetails = document.getElementById('skill-details');
-
-        skillCircles.forEach(circle => {
-            circle.addEventListener('mouseenter', function() {
-                skillDetails.innerHTML = skills[this.id];
-                skillDetails.style.opacity = 1; // Ensure details are visible
-            });
-            circle.addEventListener('mouseleave', function() {
-                skillDetails.innerHTML = ''; // Clear the details when not hovering
-                skillDetails.style.opacity = 0; // Optionally hide the container
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillCircles = document.querySelectorAll('.skill-circle');
+            skillCircles.forEach(circle => {
+                circle.addEventListener('mouseenter', function() {
+                    this.querySelector('.content').style.display = 'block';
+                    this.querySelector('.content').style.opacity = '1';
+                });
+                circle.addEventListener('mouseleave', function() {
+                    this.querySelector('.content').style.display = 'none';
+                    this.querySelector('.content').style.opacity = '0';
+                });
             });
         });
-    });
     </script>
 </body>
 </html>
