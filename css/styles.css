@@ -160,14 +160,18 @@
 
     /* Section styling */
     .section {
-        margin-bottom: 100px; /* Increased space between sections */
-        padding: 40px;
-        background-color: #ff8c00; /* Orange background for sections */
-        color: #ffffff; /* White text for contrast */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 8px 14px rgba(0,0,0,0.6); /* Subtle shadow for depth */
-        transition: opacity 0.5s ease-out; /* Smooth transition for fading effects */
-    }
+    min-height: 100vh; /* Minimum height of viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically within the section */
+    align-items: center; /* Centers content horizontally within the section */
+    margin-bottom: 100px; /* Increased space between sections */
+    padding: 40px;
+    background-color: #ff8c00; /* Orange background for sections */
+    color: #ffffff; /* White text */
+    border-radius: 8px;
+    box-shadow: 0 8px 14px rgba(0,0,0,0.6);
+}
 
     header, footer {
         background-color: #ff8c00; /* Orange background */
