@@ -104,6 +104,10 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding-top: 40px; /* Add space for the fixed navbar */
     }
+nav.navbar, footer {
+        background-color: #ff8c00; /* Orange color for both navbar and footer */
+        color: #ffffff; /* White text for readability */
+    }
 
     #sidebar {
         position: fixed;
@@ -139,7 +143,8 @@ body {
     .section {
         margin-bottom: 500px; /* Increased bottom margin for more space between sections */
         padding: 40px; /* Sufficient padding inside sections */
-        background-color: #ffffff; /* Light background for contrast */
+        background-color: #ff8c00; /* Light background for contrast */
+        color: #ffffff;  
         border-radius: 8px; /* Optional: Adds rounded corners for a smoother look */
         box-shadow: 0 8px 14px rgba(0,0,0,0.6); /* Optional: Adds a subtle shadow for depth */
         transition: opacity 0.5s ease-out; /* Smooth transition for fading */
@@ -156,10 +161,17 @@ body {
         color: #ffefd5;;
     }
     .education, .experiences, .achievements {
-        background-color: #eeeeee; /* Slightly different to add contrast between sections */
+        background-color: #ff8c00; /* Orange background overlay for better visibility */
+        color: #ffffff;
     }
-  footer {
-        background-color: #ff8c00; /* Matching orange footer */
+  header {
+        background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900'); /* Preserving background image */
+        background-color: #ff8c00; /* Orange background overlay for better visibility */
+        color: #ffffff; /* White text for header */
+    }
+    footer {
+        background-color: #ff8c00; /* Orange footer, consistent with the theme */
+        color: #ffffff; /* White text for footer */
     }
 </style>
 
