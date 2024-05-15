@@ -11,24 +11,66 @@
     <style>
         body {
             position: relative;
+            padding-top: 40px;
         }
         #sidebar {
             position: fixed;
             top: 0;
             bottom: 0;
             left: 0;
-            width: 200px;
-            padding: 20px;
+            width: 0; /* Sidebar width is zero initially */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
             background-color: #f8f9fa;
+            transition: 0.5s; /* Smooth transition effect */
+            padding-top: 60px;
+            z-index: 1000;
+        }
+        #sidebar:hover {
+            width: 200px; /* Sidebar width when hovered */
         }
         .content {
-            margin-left: 220px; /* Same as sidebar width + some padding */
+            margin-left: 20px; /* Small margin from the left edge */
+            transition: margin-left .5s; /* Smooth transition for the margin */
             padding: 20px;
+        }
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        #sidebar ul li a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 1.1em;
+            color: #333;
+            display: block;
+        }
+        #sidebar ul li a:hover {
+            color: #007bff; /* Bootstrap primary color */
+        }
+        .section {
+            margin-bottom: 40px; /* Spacing between sections */
+            padding: 20px;
+        }
+        .background {
+            background-color: #ffffff; /* White background */
+            color: #333; /* Dark text for light background */
+        }
+        .education {
+            background-color: #333; /* Dark background */
+            color: #ffffff; /* White text for dark background */
+        }
+        .skills {
+            background-color: #ffffff; /* White background */
+            color: #333; /* Dark text for light background */
+        }
+        .experiences {
+            background-color: #333; /* Dark background */
+            color: #ffffff; /* White text for dark background */
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">Start Bootstrap</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,40 +83,29 @@
         </div>
     </nav>
     <div id="sidebar">
-        <h4>Navigation</h4>
-        <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#background">Background</a></li>
-            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#experiences">Experiences</a></li>
+        <ul>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experiences">Experiences</a></li>
         </ul>
     </div>
     <div class="content">
-        <section id="experience">
+        <section id="background" class="section background">
             <h2>Background</h2>
             <p>As a high school student at the Kang Chiao International High School, I am driven by a steadfast ambition to become a doctor.</p>
-            <p>With a solid foundation in medical sciences and a passion for making a difference, I am poised to embark on a career devoted to improving the health and well-being of others.</p>
         </section>
-        <section id="education">
+        <section id="education" class="section education">
             <h2>Education</h2>
             <p>Maddison's educational background in medicine...</p>
         </section>
-        <section id="skills">
+        <section id="skills" class="section skills">
             <h2>Skills</h2>
             <p>Details about Maddison's clinical and research skills...</p>
         </section>
-        <section id="interests">
+        <section id="experiences" class="section experiences">
             <h2>Experiences</h2>
-            <h3 class="mb-0">Student Ambassador in Taiwan Region</h3>
-                        <div class="subheading mb-3">InvestIN Education</div>
-                        <p>Due to my profound enjoyment of the InvestIN Medical Camp experience, I was inspired to take on a more active role in promoting awareness of the program in Taiwan. Recognizing the limited familiarity in Taiwan, I went a step further and created an introductory video, hoping to inform more Taiwanese about the opportunities offered by InvestIN.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">09.2023 - Present</span></div>
-            <h3 class="mb-0">Intern, Physician Shadowing</h3>
-                        <div class="subheading mb-3">Linkou Chang Gung Memorial Hospital </div>
-                        <p>Through this activity, I observed how doctors consulted patients, formulated treatment plans, resolved conflicts, and communicated with patients and other colleagues realistically. I also wrote a report on this experience. It also gives me an understanding of the life of a doctor as well as how the hospital operates.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">02.2023 - 03.2023</span></div>
+            <p>Student Ambassador in Taiwan Region...</p>
         </section>
     </div>
     <footer class="py-5 bg-dark">
