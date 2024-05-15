@@ -1,7 +1,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Set up intersection observer for sections
     const sections = document.querySelectorAll('.section');
-
     const sectionObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -17,17 +17,25 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         sectionObserver.observe(section);
     });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    var sidebar = document.getElementById('sidebar');
-    var trigger = document.getElementById('sidebarTrigger');
 
-    trigger.addEventListener('mouseenter', function() {
-        sidebar.classList.add('active');
+    // Setup sidebar to appear when mouse is near
+    const sidebar = document.getElementById('sidebar');
+    // Assuming sidebarTrigger is some element you intend to use to activate the sidebar.
+    const triggerArea = document.createElement('div');
+    triggerArea.style.position = 'fixed';
+    triggerArea.style.top = '0';
+    triggerArea.style.left = '0';
+    triggerArea.style.width = '20px';
+    triggerArea.style.height = '100vh';
+    triggerArea.style.zIndex = '1500';
+    document.body.appendChild(triggerArea);
+
+    triggerArea.addEventListener('mouseenter', function() {
+        sidebar.style.left = '0'; // Adjust as necessary to position sidebar correctly
     });
 
     sidebar.addEventListener('mouseleave', function() {
-        sidebar.classList.remove('active');
+        sidebar.style.left = '-160px'; // Adjust as necessary to hide the sidebar
     });
 });
 </script>
