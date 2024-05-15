@@ -16,36 +16,21 @@
         #sidebar {
             position: fixed;
             top: 0;
-            bottom: 0;
-            left: 0;
-            width: 0; /* Sidebar width is zero initially */
-            overflow-x: hidden; /* Hide horizontal scrollbar */
-            background-color: #f8f9fa;
-            transition: 0.5s; /* Smooth transition effect */
+            left: -250px; /* Start off-screen */
+            width: 200px;
+            height: 100%;
+            background: #f8f9fa;
+            transition: left 0.3s; /* Smooth transition for moving in and out */
             padding-top: 60px;
             z-index: 1000;
         }
         #sidebar:hover {
-            width: 200px; /* Sidebar width when hovered */
+            left: 0; /* Move sidebar to show it when hovered */
         }
         .content {
-            margin-left: 20px; /* Small margin from the left edge */
-            transition: margin-left .5s; /* Smooth transition for the margin */
+            transition: margin-left .5s;
             padding: 20px;
-        }
-        #sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-        #sidebar ul li a {
-            padding: 10px;
-            text-decoration: none;
-            font-size: 1.1em;
-            color: #333;
-            display: block;
-        }
-        #sidebar ul li a:hover {
-            color: #007bff; /* Bootstrap primary color */
+            margin-left: 20px;
         }
         .section {
             margin-bottom: 40px; /* Spacing between sections */
