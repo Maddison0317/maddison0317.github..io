@@ -602,6 +602,13 @@ progress {
   height: auto;
 }
 
+.subtitle {
+    font-size: 1.2em; /* Smaller than main content headers */
+    text-decoration: underline; /* Underline the subtitle */
+    margin-bottom: 10px; /* Space below subtitle */
+    color: #555; /* Optional: slight color change for emphasis */
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
