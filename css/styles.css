@@ -136,11 +136,11 @@ body {
         padding: 20px;
     }
     .section {
-        margin-bottom: 400px; /* Increased bottom margin for more space between sections */
+        margin-bottom: 500px; /* Increased bottom margin for more space between sections */
         padding: 40px; /* Sufficient padding inside sections */
         background-color: #ffffff; /* Light background for contrast */
         border-radius: 8px; /* Optional: Adds rounded corners for a smoother look */
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Optional: Adds a subtle shadow for depth */
+        box-shadow: 0 8px 14px rgba(0,0,0,0.6); /* Optional: Adds a subtle shadow for depth */
         transition: opacity 0.5s ease-out; /* Smooth transition for fading */
     }
     /* Hidden class for fading out sections not in view */
