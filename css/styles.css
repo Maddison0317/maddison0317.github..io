@@ -107,13 +107,29 @@ body {
 
     #sidebar {
         position: fixed;
-        top: 50px; /* Adjusted to be below the navbar */
+        top: 50px; /* Align with the bottom of the navbar */
         left: 0;
-        width: 160px; /* Narrow width */
+        width: 200px;
         height: 100%;
-        background: #f8f9fa;
-        padding-top: 20px;
-        z-index: 1000; /* Ensures sidebar is above other content */
+        background-color: #343a40; /* Dark grey to match the navbar */
+        padding-top: 10px;
+        z-index: 1000;
+    }
+    #sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    #sidebar ul li a {
+        display: block;
+        padding: 10px 15px;
+        text-decoration: none;
+        color: #000000; /* Black color for text */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    }
+    #sidebar ul li a:hover {
+        background-color: #007bff; /* Bootstrap primary color for hover effects */
+        color: #ffffff; /* White text on hover */
     }
     .content {
         margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
