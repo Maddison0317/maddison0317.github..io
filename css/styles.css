@@ -127,8 +127,8 @@
     left: 0;
     width: 200px;
     height: 100%;
-    background-color: #ff8c00; /* Dark grey to match the navbar */
-    color: #ffff00; /* Changing text color to yellow */
+    background-color: #ff8c00; /* Orange background color for the sidebar */
+    color: #000000; /* Change text color to black */
     padding-top: 10px;
     z-index: 1000;
 }
@@ -137,19 +137,25 @@
     display: block;
     padding: 10px 15px;
     text-decoration: none;
-    color: #ffff00; /* Yellow text for links */
+    color: #000000; /* Black color for sidebar links */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
 
 #sidebar ul li a:hover {
-    background-color: #ffd700; /* Slightly lighter orange for hover effects */
+    background-color: #ffd700; /* Lighter orange for hover effects */
     color: #ffffff; /* White text on hover for better visibility */
 }
 
-    #sidebar ul li a:hover {
-        background-color: #ffd700; /* Yellow on hover */
-        color: #ffffff; /* White text on hover */
-    }
+footer {
+    background-color: #ff8c00;
+    color: #ffffff;
+    position: relative;
+    z-index: 1050;
+    width: 100%;
+    bottom: 0; /* Ensures footer sticks to the bottom if it's not already adjusted */
+    text-align: center; /* Centers the footer text */
+    padding: 15px 0; /* Adds padding for visual spacing */
+}
 
     /* Main content styling */
     .content {
