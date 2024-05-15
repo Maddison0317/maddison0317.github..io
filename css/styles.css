@@ -102,40 +102,21 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  <style>
-    body {
-        padding-top: 56px; /* Ensure body content starts below the fixed navbar */
+  padding-top: 40px; /* Add space for the fixed navbar */
     }
+
     #sidebar {
         position: fixed;
-        top: 56px; /* Height of the navbar */
+        top: 50px; /* Adjusted to be below the navbar */
         left: 0;
-        width: 200px; /* Width of the sidebar */
+        width: 160px; /* Narrow width */
         height: 100%;
-        background-color: #343a40; /* Dark grey to match the navbar */
-        color: #ffffff;
-        padding-top: 10px;
-        transition: all 0.3s; /* Smooth transition for animations */
-        z-index: 1000;
-    }
-    #sidebar ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    #sidebar ul li a {
-        display: block;
-        padding: 10px 15px;
-        text-decoration: none;
-        color: #ffffff;
-        transition: background-color 0.3s;
-    }
-    #sidebar ul li a:hover {
-        background-color: #007bff; /* Bootstrap primary color for hover effects */
-        color: #ffffff;
+        background: #f8f9fa;
+        padding-top: 20px;
+        z-index: 1000; /* Ensures sidebar is above other content */
     }
     .content {
-        margin-left: 220px; /* Offset for the sidebar */
+        margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
         padding: 20px;
     }
     .section {
@@ -150,11 +131,13 @@ body {
     }
 
     .background, .education, .skills, .experiences, .achievements {
-        color: #333; /* Text color for readability */
+        color: #333;
     }
     .education, .experiences, .achievements {
-        background-color: #eeeeee; /* Alternate background color for contrast */
+        background-color: #eeeeee; /* Slightly different to add contrast between sections */
     }
+</style>
+
 
 hr {
   margin: 1rem 0;
