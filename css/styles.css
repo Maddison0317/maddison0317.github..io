@@ -123,14 +123,27 @@
     /* Sidebar styles */
     #sidebar {
     position: fixed;
-    top: 50px;
+    top: 50px; /* Align with the bottom of the navbar */
     left: 0;
     width: 200px;
     height: 100%;
-    background-color: #ff8c00;
-    color: #ffffff;
+    background-color: #ff8c00; /* Orange background color for the sidebar */
+    color: #000000; /* Change text color to black */
     padding-top: 10px;
-    z-index: 1000;  /* Sidebar stays behind the footer now */
+    z-index: 1000;
+}
+
+#sidebar ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000000; /* Black color for sidebar links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+#sidebar ul li a:hover {
+    background-color: #ffd700; /* Lighter orange for hover effects */
+    color: #ffffff; /* White text on hover for better visibility */
 }
 
 footer {
@@ -143,25 +156,6 @@ footer {
     text-align: center; /* Centers the footer text */
     padding: 15px 0; /* Adds padding for visual spacing */
 }
-
-
-#sidebar ul li a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #ffff00; /* Yellow text for links */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-}
-
-#sidebar ul li a:hover {
-    background-color: #ffd700; /* Slightly lighter orange for hover effects */
-    color: #ffffff; /* White text on hover for better visibility */
-}
-
-    #sidebar ul li a:hover {
-        background-color: #ffd700; /* Yellow on hover */
-        color: #ffffff; /* White text on hover */
-    }
 
     /* Main content styling */
     .content {
