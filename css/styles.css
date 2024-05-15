@@ -106,13 +106,33 @@ body {
     }
     #sidebar {
         position: fixed;
-        top: 50px; /* Adjusted to be below the navbar */
-        left: 0;
-        width: 160px; /* Narrow width */
+        top: 50px; /* Align with the bottom of the navbar */
+        left: -160px; /* Start off-screen to the left */
+        width: 160px;
         height: 100%;
-        background: #f8f9fa;
-        padding-top: 20px;
+        background-color: #343a40; /* Dark grey to match navbar */
+        color: #ffffff; /* White text color */
+        transition: left 0.5s; /* Smooth transition for moving in and out */
         z-index: 1000; /* Ensures sidebar is above other content */
+    }
+    #sidebar:hover {
+        left: 0; /* Move sidebar to show it when hovered */
+    }
+    #sidebarTrigger {
+        position: fixed;
+        top: 50px; /* Align with the bottom of the navbar */
+        left: 0;
+        width: 20px; /* Small trigger tab width */
+        height: 100px; /* Trigger tab height */
+        background-color: #343a40; /* Dark grey to match navbar */
+        color: #ffffff;
+        text-align: center;
+        line-height: 100px; /* Center arrow vertically */
+        cursor: pointer;
+        z-index: 1100; /* Above sidebar for interaction */
+    }
+    #sidebarTrigger:hover + #sidebar {
+        left: 0; /* Move sidebar to show it when trigger is hovered */
     }
     .content {
         margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
