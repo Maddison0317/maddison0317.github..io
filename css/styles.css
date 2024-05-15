@@ -122,30 +122,29 @@
 
     /* Sidebar styles */
     #sidebar {
-        position: fixed;
-        top: 56px; /* Adjusted to align under the navbar */
-        left: 0;
-        width: 200px; /* Sidebar width */
-        height: 100%; /* Full height */
-        background-color: #ff8c00; /* Orange background */
-        color: #ffffff;
-        padding-top: 10px; /* Padding at the top */
-        z-index: 1000;
-    }
+    position: fixed;
+    top: 50px; /* Align with the bottom of the navbar */
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #ff8c00; /* Dark grey to match the navbar */
+    color: #ffff00; /* Changing text color to yellow */
+    padding-top: 10px;
+    z-index: 1000;
+}
 
-    #sidebar ul {
-        list-style-type: none; /* Removes bullet points */
-        padding: 0;
-        margin: 0;
-    }
+#sidebar ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #ffff00; /* Yellow text for links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
 
-    #sidebar ul li a {
-        display: block;
-        padding: 10px 15px;
-        text-decoration: none;
-        color: #ffffff; /* White text */
-        transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-    }
+#sidebar ul li a:hover {
+    background-color: #ffd700; /* Slightly lighter orange for hover effects */
+    color: #ffffff; /* White text on hover for better visibility */
+}
 
     #sidebar ul li a:hover {
         background-color: #ffd700; /* Yellow on hover */
