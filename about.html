@@ -1,43 +1,40 @@
-\<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>About Maddison Ma</title>
-    <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <!-- Inline style for demonstration, consider moving to an external CSS file -->
     <style>
         body {
-            padding-top: 40px; /* Add space for the fixed navbar */
+            padding-top: 40px;
+            background-color: #fff5e6;
+            font-family: Arial, sans-serif;
         }
         #sidebar {
             position: fixed;
-            top: 50px; /* Adjusted to be below the navbar */
+            top: 50px;
             left: 0;
-            width: 160px; /* Narrow width */
-            height: 100%;
+            width: 160px;
             background: #f8f9fa;
             padding-top: 20px;
-            z-index: 1000; /* Ensures sidebar is above other content */
+            z-index: 1000;
         }
         .content {
-            margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
+            margin-left: 180px;
             padding: 20px;
         }
         .section {
-            margin-bottom: 60px; /* Increased bottom margin for more space between sections */
-            padding: 40px; /* Optional: Increase padding for more internal spacing */
-            background-color: #ffffff; /* Adding a background color for contrast, adjust as needed */
-            border-radius: 8px; /* Optional: Rounded corners for aesthetic */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adding a subtle shadow for depth */
-        }
-        .background, .education, .skills, .experiences, .achievements {
+            margin-bottom: 60px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             color: #333;
         }
         .education, .experiences, .achievements {
-            background-color: #eeeeee; /* Slightly different to add contrast between sections */
+            background-color: #eeeeee;
         }
         .skills-container {
             display: flex;
@@ -51,21 +48,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
             font-size: 16px;
             color: #fff;
             cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
+            transition: transform 0.3s;
             position: relative;
-            overflow: hidden;
+            background-color: #4CAF50; /* Default color, can be changed per circle */
         }
         #language-circle { background-color: #4CAF50; }
         #computer-circle { background-color: #2196F3; }
         #soft-skills-circle { background-color: #FFC107; }
-        .skill-circle .label {
-            z-index: 2;
-            transition: opacity 0.3s ease;
-        }
         .skill-circle .content {
             position: absolute;
             top: 50%;
@@ -75,15 +67,15 @@
             width: 90%;
             height: 90%;
             opacity: 0;
-            transition: opacity 0.3s ease;
             display: none;
+            transition: opacity 0.3s;
         }
-        .skill-circle:hover .label {
-            opacity: 0;
+        .skill-circle:hover {
+            transform: scale(1.1);
         }
         .skill-circle:hover .content {
-            opacity: 1;
             display: block;
+            opacity: 1;
         }
         footer {
             position: fixed;
@@ -93,23 +85,15 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+        }
+        .interests {
+            color: black; /* Interests text color */
             z-index: 1100;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Maddison Ma</a>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div id="sidebar">
+    <nav id="sidebar">
         <ul>
             <li><a href="#background">Background</a></li>
             <li><a href="#education">Education</a></li>
@@ -118,7 +102,7 @@
             <li><a href="#interests">Interests</a></li>
             <li><a href="#achievements">Achievements</a></li>
         </ul>
-    </div>
+    </nav>
     <div class="content">
         <section id="background" class="section background">
             <h2>Background</h2>
@@ -132,29 +116,17 @@
             <h3 class="subtitle">Brunel University London</h3>
             </p>2024 - 2029 | Doctor of Medicine</p>
         </section>
-        <section id="skills" class="section skills">
+         <section id="skills" class="section skills">
             <h2>Skills</h2>
             <div class="skills-container">
                 <div class="skill-circle" id="language-circle">
-                    <span class="label">Language</span>
-                    <div class="content hidden">
-                        Mandarin - 18 years<br>
-                        English - 12 years<br>
-                        Japanese - 2 years
-                    </div>
+                    <div class="content">Mandarin - 18 years<br>English - 12 years<br>Japanese - 2 years</div>
                 </div>
                 <div class="skill-circle" id="computer-circle">
-                    <span class="label">Computer</span>
-                    <div class="content hidden">
-                        Java - 1 year
-                    </div>
+                    <div class="content">Java - 1 year</div>
                 </div>
                 <div class="skill-circle" id="soft-skills-circle">
-                    <span class="label">Soft Skills</span>
-                    <div class="content hidden">
-                        Leadership<br>
-                        Communication
-                    </div>
+                    <div class="content">Leadership<br>Communication</div>
                 </div>
             </div>
         </section>
