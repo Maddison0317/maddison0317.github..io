@@ -123,15 +123,27 @@
     /* Sidebar styles */
     #sidebar {
     position: fixed;
-    top: 50px; /* Align with the bottom of the navbar */
+    top: 50px;
     left: 0;
     width: 200px;
     height: 100%;
-    background-color: #ff8c00; /* Dark grey to match the navbar */
-    color: #ffff00; /* Changing text color to yellow */
+    background-color: #ff8c00;
+    color: #ffffff;
     padding-top: 10px;
-    z-index: 1000;
+    z-index: 1000;  /* Sidebar stays behind the footer now */
 }
+
+footer {
+    background-color: #ff8c00;
+    color: #ffffff;
+    position: relative;
+    z-index: 1050;
+    width: 100%;
+    bottom: 0; /* Ensures footer sticks to the bottom if it's not already adjusted */
+    text-align: center; /* Centers the footer text */
+    padding: 15px 0; /* Adds padding for visual spacing */
+}
+
 
 #sidebar ul li a {
     display: block;
