@@ -90,101 +90,94 @@
     scroll-behavior: smooth;
   }
 }
-html, body {
+<style>
+    /* Reset for body and HTML */
+    html, body {
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* Prevents horizontal scroll */
-    }
-body {
-  margin: 0;
-  font-family: var(--bs-body-font-family);
-  font-size: var(--bs-body-font-size);
-  font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-  text-align: var(--bs-body-text-align);
-  background-color: #fff5e6; /* Light yellow background for the whole page */
-  color: #333; /* Dark grey text for better readability */
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  padding-top: 40px; /* Add space for the fixed navbar */
-    }
-nav.navbar {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1030; /* High z-index to keep it on top */
-    }
-nav.navbar, footer {
-        background-color: #ff8c00; /* Orange color for both navbar and footer */
-        color: #ffffff; /* White text for readability */
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        font-family: 'Arial', sans-serif; /* Ensures consistent typography */
     }
 
+    /* Body specific styles */
+    body {
+        background-color: #fff5e6; /* Light yellow background for the whole page */
+        color: #333; /* Dark grey text for better readability */
+        padding-top: 56px; /* Adjusted to align with the navbar's height */
+        font-size: 16px; /* Standard font size */
+        line-height: 1.5; /* Line height for better readability */
+    }
+
+    /* Navbar styles */
+    nav.navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1030; /* Ensures navbar stays on top */
+        background-color: #ff8c00; /* Orange background */
+        color: #ffffff;
+    }
+
+    /* Sidebar styles */
     #sidebar {
         position: fixed;
-        top: 50px; /* Align with the bottom of the navbar */
+        top: 56px; /* Adjusted to align under the navbar */
         left: 0;
-        width: 200px;
-        height: 100%;
-        background-color:  #ff8c00 /* Dark grey to match the navbar */
+        width: 200px; /* Sidebar width */
+        height: 100%; /* Full height */
+        background-color: #ff8c00; /* Orange background */
         color: #ffffff;
-        padding-top: 10px;
+        padding-top: 10px; /* Padding at the top */
         z-index: 1000;
     }
+
     #sidebar ul {
-        list-style-type: none;
+        list-style-type: none; /* Removes bullet points */
         padding: 0;
         margin: 0;
     }
+
     #sidebar ul li a {
         display: block;
         padding: 10px 15px;
         text-decoration: none;
-        color: #000000; /* Black color for text */
+        color: #ffffff; /* White text */
         transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
     }
+
     #sidebar ul li a:hover {
-        background-color: #ffd700; /* Bootstrap primary color for hover effects */
+        background-color: #ffd700; /* Yellow on hover */
         color: #ffffff; /* White text on hover */
     }
+
+    /* Main content styling */
     .content {
-        margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
+        margin-left: 220px; /* Ensures content does not overlap sidebar */
         padding: 20px;
     }
+
+    /* Section styling */
     .section {
-        margin-bottom: 500px; /* Increased bottom margin for more space between sections */
-        padding: 40px; /* Sufficient padding inside sections */
-        background-color: #ff8c00; /* Light background for contrast */
-        color: #ffffff;  
-        border-radius: 8px; /* Optional: Adds rounded corners for a smoother look */
-        box-shadow: 0 8px 14px rgba(0,0,0,0.6); /* Optional: Adds a subtle shadow for depth */
-        transition: opacity 0.5s ease-out; /* Smooth transition for fading */
-    }
-    /* Hidden class for fading out sections not in view */
-    .hidden {
-        opacity: 0;
-        visibility: hidden;
-        position: absolute;
-        width: 100%;
+        margin-bottom: 100px; /* Increased space between sections */
+        padding: 40px;
+        background-color: #ff8c00; /* Orange background for sections */
+        color: #ffffff; /* White text for contrast */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 8px 14px rgba(0,0,0,0.6); /* Subtle shadow for depth */
+        transition: opacity 0.5s ease-out; /* Smooth transition for fading effects */
     }
 
-    .background, .education, .skills, .experiences, .achievements {
-        color: #ffefd5;;
+    header, footer {
+        background-color: #ff8c00; /* Orange background */
+        color: #ffffff; /* White text */
     }
-    .education, .experiences, .achievements {
-        background-color: #ff8c00; /* Orange background overlay for better visibility */
-        color: #ffffff;
-    }
-  header {
-        background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900'); /* Preserving background image */
-        background-color: #ff8c00; /* Orange background overlay for better visibility */
-        color: #ffffff; /* White text for header */
-    }
-    footer {
-        background-color: #ff8c00; /* Orange footer, consistent with the theme */
-        color: #ffffff; /* White text for footer */
+
+    header {
+        background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900'); /* Background image with overlay */
     }
 </style>
+
 
 
 hr {
