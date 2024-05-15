@@ -77,18 +77,100 @@
             <h3 class="subtitle">Brunel University London</h3>
             </p>2024 - 2029 | Doctor of Medicine</p>
         </section>
-        <section id="skills" class="section skills">
-            <h2>Skills</h2>
-            <h3 class="subtitle">Language</h3>
-            <p>Mandarin - 18 years</p>
-            <p>English - 12 years</p>
-            <p>Japanese - 2 years</p>
-            <h3 class="subtitle">Computer</h3>
-            <p>Java - 1 years</p>
-            <h3 class="subtitle">Soft skills</h3>
-            <p>Leadership</p>
-            <p>Communication</p>
-        </section>
+        <div class="skills-section">
+    <div class="skill-circle" id="language">
+        <span>Language</span>
+    </div>
+    <div class="skill-circle" id="computer">
+        <span>Computer</span>
+    </div>
+    <div class="skill-circle" id="soft-skills">
+        <span>Soft Skills</span>
+    </div>
+</div>
+<div id="skill-details">
+    <!-- Details will be inserted here based on hover -->
+</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>About Maddison Ma</title>
+    <style>
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; /* Spacing between circles */
+            margin-top: 20px;
+        }
+        .skill-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        #language { background-color: #4CAF50; } /* Green circle */
+        #computer { background-color: #2196F3; } /* Blue circle */
+        #soft-skills { background-color: #FFC107; } /* Amber circle */
+        .skill-circle:hover {
+            transform: scale(1.1); /* Enlarge on hover */
+        }
+        #skill-details {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-circle" id="language">
+                <span>Language</span>
+            </div>
+            <div class="skill-circle" id="computer">
+                <span>Computer</span>
+            </div>
+            <div class="skill-circle" id="soft-skills">
+                <span>Soft Skills</span>
+            </div>
+        </div>
+        <div id="skill-details"></div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const skills = {
+            'language': 'Language<br>Mandarin - 18 years<br>English - 12 years<br>Japanese - 2 years',
+            'computer': 'Computer<br>Java - 1 year',
+            'soft-skills': 'Soft Skills<br>Leadership<br>Communication'
+        };
+
+        const skillCircles = document.querySelectorAll('.skill-circle');
+        const skillDetails = document.getElementById('skill-details');
+
+        skillCircles.forEach(circle => {
+            circle.addEventListener('mouseenter', function() {
+                skillDetails.innerHTML = skills[this.id];
+                skillDetails.style.opacity = 1; // Ensure details are visible
+            });
+            circle.addEventListener('mouseleave', function() {
+                skillDetails.innerHTML = ''; // Clear the details when not hovering
+                skillDetails.style.opacity = 0; // Optionally hide the container
+            });
+        });
+    });
+    </script>
+</body>
+</html>
         <section id="experiences" class="section experiences">
             <h2>Experiences</h2>
              <h3 class="subtitle">Student Ambassador in Taiwan Region</h3>
