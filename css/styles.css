@@ -145,17 +145,18 @@
     background-color: #ffd700; /* Lighter orange for hover effects */
     color: #ffffff; /* White text on hover for better visibility */
 }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0; /* Reduced padding */
+        font-size: 14px; /* Adjust font size if necessary */
+        z-index: 1100;
+    }
 
-footer {
-    background-color: #ff8c00;
-    color: #ffffff;
-    position: relative;
-    z-index: 1050;
-    width: 100%;
-    bottom: 0; /* Ensures footer sticks to the bottom if it's not already adjusted */
-    text-align: center; /* Centers the footer text */
-    padding: 15px 0; /* Adds padding for visual spacing */
-}
 
     /* Main content styling */
     .content {
