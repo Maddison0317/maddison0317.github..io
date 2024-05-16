@@ -40,6 +40,59 @@
         .education, .experiences, .achievements {
             background-color: #eeeeee; /* Slightly different to add contrast between sections */
         }
+        <style>
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .skill-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #language-circle { background-color: #4CAF50; } /* Green circle */
+        #computer-circle { background-color: #2196F3; } /* Blue circle */
+        #soft-skills-circle { background-color: #FFC107; } /* Amber circle */
+
+        .skill-circle .label {
+            z-index: 2;
+            transition: opacity 0.3s ease;
+        }
+
+        .skill-circle .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 90%;
+            height: 90%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: none;
+        }
+
+        .skill-circle:hover .label {
+            opacity: 0;
+        }
+
+        .skill-circle:hover .content {
+            opacity: 1;
+            display: block;
+        }
     </style>
 </head>
 <body>

@@ -175,7 +175,7 @@ nav.navbar, footer {
         width: 100%;
     }
 
-    .background, .education, .skills, .experiences, .achievements {
+    .background, .education, .skills, .experiences, .achievements, .interests {
         color: #ffefd5;;
     }
     .education, .experiences, .achievements {
@@ -188,9 +188,12 @@ nav.navbar, footer {
         color: #ffffff; /* White text for header */
     }
     footer {
-        background-color: #ff8c00; /* Orange footer, consistent with the theme */
-        color: #ffffff; /* White text for footer */
-    }
+    background-color: #ff8c00; /* Orange footer, consistent with the theme */
+    color: #ffffff; /* White text for footer */
+    position: relative; /* Needed if not already positioned; relative, absolute, or fixed are applicable */
+    z-index: 1050; /* Higher than the sidebar's z-index of 1000 */
+    width: 100%; /* Ensure it spans the full width */
+}
 </style>
 
         /* Smooth scrolling for browsers that support it */
