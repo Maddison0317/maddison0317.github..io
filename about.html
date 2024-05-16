@@ -11,37 +11,49 @@
     <!-- Inline style for demonstration, consider moving to an external CSS file -->
     <style>
         body {
-            padding-top: 40px; /* Add space for the fixed navbar */
-            font-family: 'Times New Roman', Times, serif; /* Changes the font for the entire webpage *
+            font-family: 'Times New Roman', Times, serif; /* Ensures consistent font across the site */
+            margin: 0;
+            padding: 0;
+            background: #fff; /* Light background for better readability */
+            color: #333; /* Dark grey text for better readability */
         }
         #sidebar {
             position: fixed;
-            top: 50px; /* Adjusted to be below the navbar */
+            top: 0;
             left: 0;
-            width: 160px; /* Narrow width */
-            height: 100%;
+            width: 20%; /* Adjusted to use a percentage of the viewport width */
+            height: 100vh; /* Full viewport height */
             background: #f8f9fa;
-            padding-top: 20px;
-            z-index: 1000; /* Ensures sidebar is above other content */
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Adds shadow to the right side */
+        }
+        #sidebar h1 {
+            color: #ff8c00; /* Orange color for headings */
+            margin-bottom: 20px;
+        }
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        #sidebar ul li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background: #eee; /* Light grey background for each item */
+            cursor: pointer;
+        }
+        #sidebar ul li:hover {
+            background: #ddd; /* Slightly darker background on hover */
         }
         .content {
-            margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
+            margin-left: 20%; /* Adjusted to match the sidebar width */
             padding: 20px;
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Adds scroll to the content */
         }
-        .section {
-            margin-bottom: 60px; /* Increased bottom margin for more space between sections */
-            padding: 40px; /* Optional: Increase padding for more internal spacing */
-            background-color: #ffffff; /* Adding a background color for contrast, adjust as needed */
-            border-radius: 8px; /* Optional: Rounded corners for aesthetic */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adding a subtle shadow for depth */
+        .content h2 {
+            color: #ff8c00; /* Orange color for content headings */
         }
-        .background, .education, .skills, .experiences, .achievements {
-            color: #333;
-        }
-        .education, .experiences, .achievements {
-            background-color: #eeeeee; /* Slightly different to add contrast between sections */
-        }
-        <style>
+    </style>
         .skills-container {
             display: flex;
             justify-content: space-around;
