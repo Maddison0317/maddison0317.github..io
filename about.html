@@ -46,6 +46,44 @@
         #interests {
         color: black; /* Sets text color to black in the Interests section */
     }
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .skill-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            position: relative;
+            font-size: 20px;
+            text-align: center;
+        }
+        #language-circle { background-color: #4CAF50; }
+        #computer-circle { background-color: #2196F3; }
+        #soft-skills-circle { background-color: #FFC107; }
+        .skill-details {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            padding: 10px;
+        }
+        .skill-circle:hover .skill-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -83,17 +121,31 @@
             <h3 class="subtitle">Brunel University London</h3>
             </p>2024 - 2029 | Doctor of Medicine</p>
         </section>
-        <section id="skills" class="section skills">
+         <section id="skills" class="section skills">
             <h2>Skills</h2>
-            <h3 class="subtitle">Language</h3>
-            <p>Mandarin - 18 years</p>
-            <p>English - 12 years</p>
-            <p>Japanese - 2 years</p>
-            <h3 class="subtitle">Computer</h3>
-            <p>Java - 1 years</p>
-            <h3 class="subtitle">Soft skills</h3>
-            <p>Leadership</p>
-            <p>Communication</p>
+            <div class="skills-container">
+                <div class="skill-circle" id="language-circle">
+                    Language
+                    <div class="skill-details">
+                        Mandarin - 18 years<br>
+                        English - 12 years<br>
+                        Japanese - 2 years
+                    </div>
+                </div>
+                <div class="skill-circle" id="computer-circle">
+                    Computer
+                    <div class="skill-details">
+                        Java - 1 year
+                    </div>
+                </div>
+                <div class="skill-circle" id="soft-skills-circle">
+                    Soft Skills
+                    <div class="skill-details">
+                        Leadership<br>
+                        Communication
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="experiences" class="section experiences">
             <h2>Experiences</h2>
