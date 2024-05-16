@@ -8,89 +8,37 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- Inline style for demonstration, consider moving to an external CSS file -->
     <style>
         body {
-            padding-top: 40px; /* Space for the fixed navbar */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Consistent font with the homepage */
-            position: relative;
-            min-height: 100vh;
-            padding-bottom: 70px; /* Space for the footer */
+            padding-top: 40px; /* Add space for the fixed navbar */
         }
         #sidebar {
             position: fixed;
-            top: 50px;
+            top: 50px; /* Adjusted to be below the navbar */
             left: 0;
-            width: 160px;
+            width: 160px; /* Narrow width */
             height: 100%;
-            background-color: #f8f9fa;
+            background: #f8f9fa;
             padding-top: 20px;
-            z-index: 1000;
-        }
-        #sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-        #sidebar ul li a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
+            z-index: 1000; /* Ensures sidebar is above other content */
         }
         .content {
-            margin-left: 200px;
+            margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
             padding: 20px;
         }
         .section {
-            margin-bottom: 60px;
-            padding: 40px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 60px; /* Increased bottom margin for more space between sections */
+            padding: 40px; /* Optional: Increase padding for more internal spacing */
+            background-color: #ffffff; /* Adding a background color for contrast, adjust as needed */
+            border-radius: 8px; /* Optional: Rounded corners for aesthetic */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adding a subtle shadow for depth */
         }
-        .skill-circle {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            font-size: 16px;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            position: relative;
-            overflow: hidden;
+        .background, .education, .skills, .experiences, .achievements {
+            color: #333;
         }
-        #language-circle { background-color: #4CAF50; }
-        #computer-circle { background-color: #2196F3; }
-        #soft-skills-circle { background-color: #FFC107; }
-        .skill-circle .label { z-index: 2; transition: opacity 0.3s ease; }
-        .skill-circle .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 90%;
-            height: 90%;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: none;
-        }
-        .skill-circle:hover .label { opacity: 0; }
-        .skill-circle:hover .content { opacity: 1; display: block; }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-            z-index: 999;
+        .education, .experiences, .achievements {
+            background-color: #eeeeee; /* Slightly different to add contrast between sections */
         }
     </style>
 </head>
@@ -129,49 +77,18 @@
             <h3 class="subtitle">Brunel University London</h3>
             </p>2024 - 2029 | Doctor of Medicine</p>
         </section>
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-circle" id="language-circle">
-                <span class="label">Language</span>
-                <div class="content hidden">
-                    Mandarin - 18 years<br>
-                    English - 12 years<br>
-                    Japanese - 2 years
-                </div>
-            </div>
-            <div class="skill-circle" id="computer-circle">
-                <span class="label">Computer</span>
-                <div class="content hidden">
-                    Java - 1 year
-                </div>
-            </div>
-            <div class="skill-circle" id="soft-skills-circle">
-                <span class="label">Soft Skills</span>
-                <div class="content hidden">
-                    Leadership<br>
-                    Communication
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const skillCircles = document.querySelectorAll('.skill-circle');
-            skillCircles.forEach(circle => {
-                circle.addEventListener('mouseenter', function() {
-                    this.querySelector('.content').style.display = 'block';
-                    this.querySelector('.content').style.opacity = '1';
-                });
-                circle.addEventListener('mouseleave', function() {
-                    this.querySelector('.content').style.display = 'none';
-                    this.querySelector('.content').style.opacity = '0';
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+        <section id="skills" class="section skills">
+            <h2>Skills</h2>
+            <h3 class="subtitle">Language</h3>
+            <p>Mandarin - 18 years</p>
+            <p>English - 12 years</p>
+            <p>Japanese - 2 years</p>
+            <h3 class="subtitle">Computer</h3>
+            <p>Java - 1 years</p>
+            <h3 class="subtitle">Soft skills</h3>
+            <p>Leadership</p>
+            <p>Communication</p>
+        </section>
         <section id="experiences" class="section experiences">
             <h2>Experiences</h2>
              <h3 class="subtitle">Student Ambassador in Taiwan Region</h3>
@@ -200,11 +117,12 @@
             <p>This award recognizes students with outstanding academic performance each academic year. There is no limit on the number of awardees. Those with a GPA of 4.2 or higher are eligible for the award.</p>
         </section>
     </div>
-    <footer>
-        <div class="container">
-            <p>Copyright &copy; Maddison Ma 2024</p>
-        </div>
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Maddison Ma 2024</p></div>
     </footer>
+    <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
