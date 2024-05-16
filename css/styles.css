@@ -117,6 +117,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   padding-top: 40px; /* Add space for the fixed navbar */
+  font-family: 'Times New Roman', Times, serif;
     }
 nav.navbar {
         position: fixed;
@@ -184,9 +185,6 @@ nav.navbar, footer {
     .education, .experiences, .achievements {
         background-color: #ff8c00; /* Orange background overlay for better visibility */
         color: #ffffff;
-    }
-.interests {
-        color: #000000; /* Black color for text */
     }
   header {
         background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900'); /* Preserving background image */
@@ -256,6 +254,11 @@ hr {
   border-top: 1px solid;
   opacity: 0.25;
 }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #ff8c00; /* Sets the text color to orange */
+    }
+
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
