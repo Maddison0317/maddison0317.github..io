@@ -84,6 +84,40 @@
             flex-direction: column;
             justify-content: center;
         }
+        .interests-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.interest-card {
+    width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-card img {
+    width: 100px;
+    height: auto;
+    margin: 10px auto;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.interest-card h3 {
+    color: #ff8c00; /* Matching the title color theme */
+}
+
+.interest-card p {
+    font-size: 14px;
+    color: #666;
+}
+
     </style>
 </head>
 <body>
@@ -161,11 +195,25 @@
             <p>In this volunteer activity, I was responsible for accompanying the elderly, helping them eat, reading newspapers, and doing other service projects. The specific things I do are to draw postcards with them, take them out for a walk, and do some simple crafts to accompany them. Moreover, I had the opportunity to communicate with the elders.<p>
         </section>
           <section id="interests" class="section interests">
-            <h2>Interests</h2>
-            <p>Art</p>  
-            <p>Music</p>  
-            <p>Travel</p>  
-        </section>
+    <h2>Interests</h2>
+    <div class="interests-container">
+        <div class="interest-card">
+            <img src="path_to_art_icon.jpg" alt="Art">
+            <h3>Art</h3>
+            <p>Exploring various forms of visual creativity.</p>
+        </div>
+        <div class="interest-card">
+            <img src="path_to_music_icon.jpg" alt="Music">
+            <h3>Music</h3>
+            <p>Enjoying and creating musical pieces.</p>
+        </div>
+        <div class="interest-card">
+            <img src="path_to_travel_icon.jpg" alt="Travel">
+            <h3>Travel</h3>
+            <p>Discovering new cultures and environments.</p>
+        </div>
+    </div>
+</section>
         <section id="achievements" class="section achievements">
             <h2>Achievements</h2>
              <h3 class="subtitle">AP Scholar with Distinction Award</h3>
