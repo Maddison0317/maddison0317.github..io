@@ -196,6 +196,33 @@ footer {
         background-color: #ff8c00; /* Orange background overlay for better visibility */
         color: #ffffff;
     }
+/* Assuming your current CSS for the skills and interests sections is like this: */
+
+.skills-container, .interests-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.skill-circle, .interest-item {
+    width: 150px; /* Set the widths for the circles or items */
+    height: 150px;
+    border-radius: 50%;
+    /* Additional styling */
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) { /* Adjusts for screens smaller than 768px */
+    .skills-container, .interests-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-circle, .interest-item {
+        width: 120px; /* Optional: Adjust size for smaller screens */
+        height: 120px;
+        margin-bottom: 20px; /* Add space between vertically stacked items */
+    }
+}
   header {
         background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1600x900'); /* Preserving background image */
         background-color: #ff8c00; /* Orange background overlay for better visibility */
