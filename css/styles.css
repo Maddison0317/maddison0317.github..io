@@ -119,17 +119,27 @@ body {
   padding-top: 40px; /* Add space for the fixed navbar */
   font-family: 'Times New Roman', Times, serif;
     }
-nav.navbar {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1030; /* High z-index to keep it on top */
-    }
 nav.navbar, footer {
-        background-color: #ff8c00; /* Orange color for both navbar and footer */
-        color: #ffffff; /* White text for readability */
-    }
+    position: fixed; /* Ensure navbar remains fixed at the top */
+    width: 100%; /* Full width of the viewport */
+    top: 0; /* Top of the viewport */
+    left: 0; /* Align to the left side of the viewport */
+    z-index: 1030; /* High z-index to keep it on top of other content */
+    background-color: #ff8c00; /* Vibrant orange background */
+    color: #ffffff; /* White text for contrast and readability */
+}
+
+/* Specific styles for the navbar */
+nav.navbar {
+    height: 50px; /* Set the height of the navbar */
+}
+
+/* Footer might not need to be fixed depending on your layout preference */
+footer {
+    position: relative; /* Change to 'fixed' if you want it always at the bottom */
+    bottom: 0; /* Align to the bottom of the viewport if fixed */
+}
+
 
     #sidebar {
         position: fixed;
