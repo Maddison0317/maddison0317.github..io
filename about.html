@@ -1,4 +1,5 @@
-Fix the footer, intertest word format to black, and the skills section, please fix it to match all the format with the website:\<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -11,101 +12,58 @@ Fix the footer, intertest word format to black, and the skills section, please f
     <style>
         body {
             padding-top: 40px; /* Add space for the fixed navbar */
+            font-family: 'Arial', sans-serif; /* Ensure font-family matches the Home page */
+            color: #333;
+            background-color: #fff;
         }
         #sidebar {
             position: fixed;
-            top: 50px; /* Adjusted to be below the navbar */
+            top: 50px;
             left: 0;
-            width: 160px; /* Narrow width */
+            width: 200px;
             height: 100%;
-            background: #f8f9fa;
-            padding-top: 20px;
-            z-index: 1000; /* Ensures sidebar is above other content */
+            background-color: #f8f9fa;
+            color: #000;
+            padding: 10px;
+            z-index: 1000;
         }
         .content {
-            margin-left: 180px; /* Adjust content margin to not overlap with sidebar */
+            margin-left: 220px;
             padding: 20px;
         }
         .section {
-            margin-bottom: 60px; /* Increased bottom margin for more space between sections */
-            padding: 40px; /* Optional: Increase padding for more internal spacing */
-            background-color: #ffffff; /* Adding a background color for contrast, adjust as needed */
-            border-radius: 8px; /* Optional: Rounded corners for aesthetic */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adding a subtle shadow for depth */
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .background, .education, .skills, .experiences, .achievements {
-            color: #333;
-        }
-        .education, .experiences, .achievements {
-            background-color: #eeeeee; /* Slightly different to add contrast between sections */
-        }
-        .skills-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .skill-circle {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            font-size: 16px;
-            color: #fff;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-        #language-circle { background-color: #4CAF50; }
-        #computer-circle { background-color: #2196F3; }
-        #soft-skills-circle { background-color: #FFC107; }
-        .skill-circle .label {
-            z-index: 2;
-            transition: opacity 0.3s ease;
-        }
-        .skill-circle .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            width: 90%;
-            height: 90%;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: none;
-        }
-        .skill-circle:hover .label {
-            opacity: 0;
-        }
-        .skill-circle:hover .content {
-            opacity: 1;
-            display: block;
+        h2 {
+            font-family: 'Arial', sans-serif; /* Match heading font style */
+            color: #333; /* Consistent color for headings */
         }
         footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 5px 0;
-            font-size: 14px;
-            z-index: 1100;
+            z-index: 1050;
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Maddison Ma</a>
+            <a class="navbar-brand" href="#!">Maddison Ma</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
